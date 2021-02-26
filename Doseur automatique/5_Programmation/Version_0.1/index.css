@@ -1,0 +1,291 @@
+/*imports*/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+
+/**************
+* Page Global *
+**************/
+body
+{
+	background-color: #222;
+	height: 100%;
+}
+
+p
+{
+	font-size: 2vw;
+	font-family: unbuntu;
+	color: white;
+}
+
+/********
+* Titre *
+********/
+h1,h2
+{
+	font-size: 2vw;
+	font-family: unbuntu;
+	color: rgb(160, 160, 160);
+	text-align: center;
+}
+
+h1
+{
+	font-size: 3vw;
+}
+
+/**********
+* Boutons *
+**********/
+#circleButton
+{
+  height: 11.7vw;
+  width: 11.7vw;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#circleButton:hover
+{
+  border: 0.4vw solid rgb(182, 182, 182);
+  transition: 0.2s;
+}
+
+/******************
+* Bouton Cocktail *
+******************/
+.imgCocktail
+{
+	position: absolute;
+	top: 25vw;
+	left: 35vw;
+	background-color: rgb(88, 0, 84);
+}
+
+#boutonCocktail 
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#boutonCocktail:hover 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.imgCocktail:hover ~ #boutonCocktail
+{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#listeImg
+{
+	height: 8vw;
+  	width: 8vw;
+  	border-radius: 50%;
+  	background-color: rgb(88, 0, 84);
+  	position: absolute;
+	top: 32vw;
+	left: 27vw;
+	transform: translate(-50%, -50%);
+}
+
+#listeImg:hover
+{
+	border: 0.4vw solid rgb(182, 182, 182);
+  	transition: 0.2s;
+}
+
+#textListe
+{
+	visibility: hidden;
+}
+
+#listeImg:hover ~ #textListe
+{
+	visibility: visible;
+	position: absolute;
+	top: 36vw;
+	left: 27vw;
+	transform: translate(-50%, -50%);
+}
+
+#topImg
+{
+	height: 8vw;
+  	width: 8vw;
+  	border-radius: 50%;
+  	background-color: rgb(88, 0, 84);
+  	position: absolute;
+	top: 32vw;
+	left: 43vw;
+	transform: translate(-50%, -50%);
+}
+
+#topImg:hover
+{
+	border: 0.4vw solid rgb(182, 182, 182);
+  	transition: 0.2s;
+}
+
+#textTop
+{
+	visibility: hidden;
+}
+
+#topImg:hover ~ #textTop
+{
+	visibility: visible;
+	position: absolute;
+	top: 36vw;
+	left: 43vw;
+	transform: translate(-50%, -50%);
+}
+
+/**************
+* Bouton Jeux *
+**************/
+.imgJeux
+{
+	position: absolute;
+	top: 25vw;
+	left: 65vw;
+	background-color: red;
+}
+
+#boutonJeux 
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#boutonJeux:hover 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.imgJeux:hover ~ #boutonJeux
+{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#roulletteImg
+{
+	height: 8vw;
+  	width: 8vw;
+  	border-radius: 50%;
+  	background-color: red;
+  	position: absolute;
+	top: 32vw;
+	left: 57vw;
+	transform: translate(-50%, -50%);
+}
+
+#roulletteImg:hover
+{
+	border: 0.4vw solid rgb(182, 182, 182);
+  	transition: 0.2s;
+}
+
+#textRoullette
+{
+	visibility: hidden;
+}
+
+#roulletteImg:hover ~ #textRoullette
+{
+	visibility: visible;
+	position: absolute;
+	top: 36vw;
+	left: 57vw;
+	transform: translate(-50%, -50%);
+}
+
+#randomImg
+{
+	height: 8vw;
+  	width: 8vw;
+  	border-radius: 50%;
+  	background-color: red;
+  	position: absolute;
+	top: 32vw;
+	left: 73vw;
+	transform: translate(-50%, -50%);
+}
+
+#randomImg:hover
+{
+	border: 0.4vw solid rgb(182, 182, 182);
+  	transition: 0.2s;
+}
+
+#textRandom
+{
+	visibility: hidden;
+}
+
+#randomImg:hover ~ #textRandom
+{
+	visibility: visible;
+	position: absolute;
+	top: 36vw;
+	left: 73vw;
+	transform: translate(-50%, -50%);
+}
+
+/******************
+* Bouton Creation *
+******************/
+.creationImg
+{
+	position: absolute;
+	top: 45vw;
+	left: 35vw;
+	background-color: #AAAAAA;
+}
+
+#textCreation
+{
+	visibility: hidden;
+}
+
+#creationImg:hover ~ #textCreation
+{
+	visibility: visible;
+	position: absolute;
+	top: 51vw;
+	left: 35vw;
+	transform: translate(-50%, -50%);
+}
+
+/**********************
+* Bouton Presentation *
+**********************/
+.presentationImg
+{
+	position: absolute;
+	top: 45vw;
+	left: 65vw;
+	background-color: lightgreen;
+}
+
+#textPresentation
+{
+	visibility: hidden;
+}
+
+#presentationImg:hover ~ #textPresentation
+{
+	visibility: visible;
+	position: absolute;
+	top: 51vw;
+	left: 65vw;
+	transform: translate(-50%, -50%);
+}
