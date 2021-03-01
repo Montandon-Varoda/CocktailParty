@@ -256,7 +256,7 @@ h1
 	visibility: hidden;
 }
 
-#creationImg:hover ~ #textCreation
+.creationImg:hover ~ #textCreation
 {
 	visibility: visible;
 	position: absolute;
@@ -281,7 +281,7 @@ h1
 	visibility: hidden;
 }
 
-#presentationImg:hover ~ #textPresentation
+.presentationImg:hover ~ #textPresentation
 {
 	visibility: visible;
 	position: absolute;
