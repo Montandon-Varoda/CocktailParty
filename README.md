@@ -1,9 +1,16 @@
-# CocktailParty
+<h1 align="center"> CocktailParty </h1>
+
+
+[To Do list](https://github.com/Montandon-Varoda/CocktailParty/projects/1)
+
+<a href="https://github.com/Forestierr/CocktailParty/wiki"><img src="https://img.shields.io/badge/GitHub-Wiki-Green.svg" alt="git"/></a>
+
+<a href=""><img src="https://img.shields.io/github/v/release/Forestierr/CocktailParty?include_prereleases" alt="version"/></a>
 
 ## Présentation
 
-[ToDo list](https://github.com/Montandon-Varoda/CocktailParty/projects/1)
-
+## License  
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <h2> </h2>
 
