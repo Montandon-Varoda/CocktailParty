@@ -1,11 +1,10 @@
 <h1 align="center"> CocktailParty </h1>
 
+<a href="https://github.com/Montandon-Varoda/CocktailParty/projects/1"><img src="https://img.shields.io/badge/GitHub-ToDoList-Green.svg" alt="git"/></a>
 
-[To Do list](https://github.com/Montandon-Varoda/CocktailParty/projects/1)
+<a href="https://github.com/Montandon-Varoda/CocktailParty/wiki"><img src="https://img.shields.io/badge/GitHub-Wiki-Green.svg" alt="git"/></a>
 
-<a href="https://github.com/Forestierr/CocktailParty/wiki"><img src="https://img.shields.io/badge/GitHub-Wiki-Green.svg" alt="git"/></a>
-
-<a href=""><img src="https://img.shields.io/github/v/release/Forestierr/CocktailParty?include_prereleases" alt="version"/></a>
+<a href=""><img src="https://img.shields.io/github/v/release/Montandon-Varoda/CocktailParty?include_prereleases" alt="version"/></a>
 
 ## Présentation
 
