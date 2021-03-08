@@ -102,15 +102,15 @@ h1
 #textListe
 {
 	visibility: hidden;
+	position: absolute;
+	top: 36vw;
+	left: 27vw;
+	transform: translate(-50%, -50%);
 }
 
 #listeImg:hover ~ #textListe
 {
 	visibility: visible;
-	position: absolute;
-	top: 36vw;
-	left: 27vw;
-	transform: translate(-50%, -50%);
 }
 
 #topImg
@@ -134,15 +134,15 @@ h1
 #textTop
 {
 	visibility: hidden;
+	position: absolute;
+	top: 36vw;
+	left: 43vw;
+	transform: translate(-50%, -50%);
 }
 
 #topImg:hover ~ #textTop
 {
 	visibility: visible;
-	position: absolute;
-	top: 36vw;
-	left: 43vw;
-	transform: translate(-50%, -50%);
 }
 
 /**************
@@ -153,7 +153,6 @@ h1
 	position: absolute;
 	top: 25vw;
 	left: 65vw;
-	background-color: red;
 }
 
 #boutonJeux 
@@ -181,7 +180,7 @@ h1
 	height: 8vw;
   	width: 8vw;
   	border-radius: 50%;
-  	background-color: red;
+  	background-color: rgb(255, 77, 5);
   	position: absolute;
 	top: 32vw;
 	left: 57vw;
@@ -197,15 +196,15 @@ h1
 #textRoullette
 {
 	visibility: hidden;
+	position: absolute;
+	top: 36vw;
+	left: 57vw;
+	transform: translate(-50%, -50%);
 }
 
 #roulletteImg:hover ~ #textRoullette
 {
 	visibility: visible;
-	position: absolute;
-	top: 36vw;
-	left: 57vw;
-	transform: translate(-50%, -50%);
 }
 
 #randomImg
@@ -213,7 +212,7 @@ h1
 	height: 8vw;
   	width: 8vw;
   	border-radius: 50%;
-  	background-color: red;
+  	background-color: rgb(195, 0 ,71);
   	position: absolute;
 	top: 32vw;
 	left: 73vw;
@@ -229,15 +228,16 @@ h1
 #textRandom
 {
 	visibility: hidden;
+	position: absolute;
+	top: 36vw;
+	left: 73vw;
+	transform: translate(-50%, -50%);
 }
 
 #randomImg:hover ~ #textRandom
 {
 	visibility: visible;
-	position: absolute;
-	top: 36vw;
-	left: 73vw;
-	transform: translate(-50%, -50%);
+	
 }
 
 /******************
@@ -248,21 +248,21 @@ h1
 	position: absolute;
 	top: 45vw;
 	left: 35vw;
-	background-color: #AAAAAA;
+	background-color: rgb(80,100,250);
 }
 
 #textCreation
 {
 	visibility: hidden;
+	position: absolute;
+	top: 51vw;
+	left: 35vw;
+	transform: translate(-50%, -50%);
 }
 
 .creationImg:hover ~ #textCreation
 {
 	visibility: visible;
-	position: absolute;
-	top: 51vw;
-	left: 35vw;
-	transform: translate(-50%, -50%);
 }
 
 /**********************
@@ -279,13 +279,13 @@ h1
 #textPresentation
 {
 	visibility: hidden;
+	position: absolute;
+	top: 51vw;
+	left: 65vw;
+	transform: translate(-50%, -50%);
 }
 
 .presentationImg:hover ~ #textPresentation
 {
 	visibility: visible;
-	position: absolute;
-	top: 51vw;
-	left: 65vw;
-	transform: translate(-50%, -50%);
 }

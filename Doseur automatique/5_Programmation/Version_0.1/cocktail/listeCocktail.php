@@ -7,6 +7,10 @@
 	<title>Liste Cocktail</title>
 </head>
 <body>
+	
+</body>
+</html>
+<!--
 	<?php
 		try 
 		{
@@ -18,7 +22,13 @@
 			// En cas d'erreur, on affiche un message et on arrête tout
 			die('Erreur: '.$e->getMessage());	
 		}	
-		$bdd->query('SELECT * FROM liste')
+		$req = $bdd->query('SELECT * FROM liste');
+		while ($donnee = $req->fetch()) 
+		{
+			echo "<br/>Nom: ".$donnee['nom'].
+			"<br/>Type: ".$donnee['type'].
+			"<br/>Taux d'alcool: ".$donnee['taux']."%<br/>";
+		}
+		$req->closeCursor(); 
 	?>
-</body>
-</html>
+-->
