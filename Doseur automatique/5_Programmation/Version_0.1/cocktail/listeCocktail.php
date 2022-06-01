@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../index.css">
 	<link rel="icon" href="../img/icon.png">
-	<title>Liste Cocktail</title>
+	<title>Cocktail Party</title>
 </head>
 <body> 
 	<header>
@@ -56,7 +56,7 @@
 				$req->execute(array('bouton' => $_POST['bouton']));
 				while ($donnee = $req->fetch()) 
 				{
-					echo "<tr><td id='photo'><img src='photo/".$donnee['photo']."'></td><td><a href='".$donnee['id']."'>".$donnee['nom']."</a></td><td>".$donnee['description']."</td><td>".$donnee['taux']."%</td><td>".$donnee['prix']."</td></tr>";
+					echo "<tr><td id='photo'><img src='photo/".$donnee['photo']."'></td><td><a href='cocktail.php?boisson=".$donnee['id']."'>".$donnee['nom']."</a></td><td>".$donnee['description']."</td><td>".$donnee['taux']."%</td><td>".$donnee['prix']."</td></tr>";
 				}
 				$req->closeCursor(); 
 			echo"</table></p>";
