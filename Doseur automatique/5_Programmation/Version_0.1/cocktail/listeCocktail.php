@@ -6,10 +6,17 @@
 	<link rel="icon" href="../img/icon.png">
 	<title>Liste Cocktail</title>
 </head>
-<body>
+<body> 
 	<header>
 		<h1>Cocktail Party</h1>
 		<h2>Liste des cocktails</h2>
+		<!--Bouton retour-->
+		<a href="../index.php">
+		    <button id="back" class="backbutton">
+		    	<img class="backimg" src="../img/back.png" height="40">
+		        <p class="backText">Retour</p>
+		   	</button>
+		</a>	 
 	</header>
 	<nav>
 		<form method="post" action="listeCocktail.php">
@@ -44,12 +51,12 @@
 				echo"<h3>Soft</h3>";
 				$_POST['bouton'] = 'Soft';
 			}
-			echo"<p><form method='post' action='listeCocktail.php'><table><tr><th></th><th>Nom</th><th>Descritpion</th><th>Taux</th><th></th></tr>";
+			echo"<p><table><tr><th></th><th>Nom</th><th>Descritpion</th><th>Taux</th><th>Prix</th></tr>";
 				$req = $bdd->prepare('SELECT * FROM liste WHERE type = :bouton');
 				$req->execute(array('bouton' => $_POST['bouton']));
 				while ($donnee = $req->fetch()) 
 				{
-					echo "<tr><td id='photo'>".$donnee['photo']."</td><td>".$donnee['nom']."</td><td>".$donnee['description']."</td><td>".$donnee['taux']."%</td><td></td></tr>";
+					echo "<tr><td id='photo'><img src='photo/".$donnee['photo']."'></td><td><a href='".$donnee['id']."'>".$donnee['nom']."</a></td><td>".$donnee['description']."</td><td>".$donnee['taux']."%</td><td>".$donnee['prix']."</td></tr>";
 				}
 				$req->closeCursor(); 
 			echo"</table></p>";

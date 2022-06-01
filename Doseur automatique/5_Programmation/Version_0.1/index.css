@@ -17,7 +17,7 @@ h1,h2,h3
 {
 	font-size: 2vw;
 	font-family: unbuntu;
-	color: rgb(160, 160, 160);
+	color: white;
 	text-align: center;
 }
 
@@ -32,6 +32,44 @@ h1
 	font-size: 3.5vw;
 }
 
+/****************
+* Bouton retour *
+****************/
+.backbutton{
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  border: none;
+  background-color: rgb(144, 144, 144);
+}
+.backbutton:hover{
+  background-color: rgb(77, 77, 77);
+  transition: 0.2s;
+}
+.backbutton:hover .backText{
+  visibility: visible;
+  transition: 0.2s;
+}
+.backText{
+  visibility: hidden;
+  position: relative;
+  top: 3.5vw;
+  color: white;
+  font-family: 'Ubuntu';
+  font-size: 1.3vw;
+}
+.backimg{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 47%;
+  top: 50%;
+  right: 53%;
+  bottom: 50%;
+  height: 3vw;
+}
 /*************
 * Navigation *
 *************/
@@ -63,8 +101,9 @@ nav input:hover
 /**********
 * Section *
 **********/
-section p
+section p,a
 {
+	text-decoration: none;
 	font-size: 1.7vw;
 	font-family: unbuntu;
 	color: white;
@@ -91,6 +130,13 @@ section td
 	font-size: 1.6vw;
 	font-family: unbuntu;
 	color: white;
+}
+section img
+{
+	height: 8vw;
+  	width: 8vw;
+  	border-radius: 50%;
+  	background-color: #222;
 }
 
 /**********
@@ -348,4 +394,73 @@ section td
 .presentationImg:hover ~ #textPresentation
 {
 	visibility: visible;
+}
+
+/* Only for raspberry pi screen (res : 800px / 480px ) */
+@media all and (max-width: 800px) and (max-height: 480px) and (min-width: 799px){
+
+    /* Don't show cursor*/
+    * {
+        cursor: none;
+    }
+
+    body {
+        overflow: overlay;
+    }
+
+    .header a {
+        margin-right: 20px;
+    }
+
+    /* Custom scroll bar */
+
+    ::-webkit-scrollbar {
+        width: 25px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #bbb;
+        background-clip: padding-box;
+        border: 0.05em solid #eee;
+        border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background: transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    ::-webkit-scrollbar-button:single-button {
+        background-color: transparent;
+        display: block;
+        border-style: solid;
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Up */
+    ::-webkit-scrollbar-button:single-button:vertical:decrement {
+        border-width: 0px 12px 16px 12px;
+        border-color: transparent transparent #bbb transparent;
+    }
+
+    ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+        border-color: transparent transparent #999 transparent;
+    }
+    /* Down */
+    ::-webkit-scrollbar-button:single-button:vertical:increment {
+        border-width: 16px 12px 0 12px;
+        border-color: #bbb transparent transparent transparent;
+    }
+
+    ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+        border-color: #999 transparent transparent transparent;
+    }
+
 }
