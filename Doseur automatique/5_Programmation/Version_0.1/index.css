@@ -10,17 +10,10 @@ body
 	height: 100%;
 }
 
-p
-{
-	font-size: 2vw;
-	font-family: unbuntu;
-	color: white;
-}
-
 /********
 * Titre *
 ********/
-h1,h2
+h1,h2,h3
 {
 	font-size: 2vw;
 	font-family: unbuntu;
@@ -28,9 +21,76 @@ h1,h2
 	text-align: center;
 }
 
-h1
+h3
 {
 	font-size: 3vw;
+	color: purple;
+}
+
+h1
+{
+	font-size: 3.5vw;
+}
+
+/*************
+* Navigation *
+*************/
+nav form
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+nav input
+{
+	font-size: 2vw;
+	font-family: unbuntu;
+	color: white;
+	background-color: #222;
+	height: 50px; /*********************vw**************************/
+	width: 300px;
+	border-style: none;
+}
+
+nav input:hover
+{
+	color: purple;
+	background-color: #222;
+	border-style: none;
+}
+
+/**********
+* Section *
+**********/
+section p
+{
+	font-size: 1.7vw;
+	font-family: unbuntu;
+	color: white;
+}
+section table
+{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+section th,td
+{
+	border: 1px solid #222;
+	width: 20%;
+}
+section th
+{
+	font-size: 1.8vw;
+	font-family: unbuntu;
+	color: white;
+}
+section td
+{
+	font-size: 1.6vw;
+	font-family: unbuntu;
+	color: white;
 }
 
 /**********

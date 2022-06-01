@@ -2,33 +2,60 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="listeCocktail.css">
+	<link rel="stylesheet" type="text/css" href="../index.css">
 	<link rel="icon" href="../img/icon.png">
 	<title>Liste Cocktail</title>
 </head>
 <body>
-	
+	<header>
+		<h1>Cocktail Party</h1>
+		<h2>Liste des cocktails</h2>
+	</header>
+	<nav>
+		<form method="post" action="listeCocktail.php">
+			<input type="submit" name="bouton" value="Soft">
+			<input type="submit" name="bouton" value="Alcool">
+			<input type="submit" name="bouton" value="Alcool Fort">
+			<input type="submit" name="bouton" value="Ma Liste">
+		</form>
+	</nav>
+	<section>
+		<?php
+			try 
+			{
+				// On se connecte à SQL
+			 	$bdd = new PDO('mysql:host=localhost;dbname=cocktail_party;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			} 
+			catch (Exception $e) 
+			{
+				// En cas d'erreur, on affiche un message et on arrête tout
+				die('Erreur: '.$e->getMessage());	
+			}
+			if(isset($_POST['bouton']))
+			{
+				if($_POST['bouton']=='Ma Liste')
+				{
+					header('Location: ');
+				}
+				echo"<h3>".$_POST['bouton']."</h3>";
+			}
+			else
+			{
+				echo"<h3>Soft</h3>";
+				$_POST['bouton'] = 'Soft';
+			}
+			echo"<p><form method='post' action='listeCocktail.php'><table><tr><th></th><th>Nom</th><th>Descritpion</th><th>Taux</th><th></th></tr>";
+				$req = $bdd->prepare('SELECT * FROM liste WHERE type = :bouton');
+				$req->execute(array('bouton' => $_POST['bouton']));
+				while ($donnee = $req->fetch()) 
+				{
+					echo "<tr><td id='photo'>".$donnee['photo']."</td><td>".$donnee['nom']."</td><td>".$donnee['description']."</td><td>".$donnee['taux']."%</td><td></td></tr>";
+				}
+				$req->closeCursor(); 
+			echo"</table></p>";
+		?>
+	</section>
 </body>
 </html>
-<!--
-	<?php
-		try 
-		{
-			// On se connecte à SQL
-	 		$bdd = new PDO('mysql:host=localhost;dbname=cocktail_party;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		} 
-		catch (Exception $e) 
-		{
-			// En cas d'erreur, on affiche un message et on arrête tout
-			die('Erreur: '.$e->getMessage());	
-		}	
-		$req = $bdd->query('SELECT * FROM liste');
-		while ($donnee = $req->fetch()) 
-		{
-			echo "<br/>Nom: ".$donnee['nom'].
-			"<br/>Type: ".$donnee['type'].
-			"<br/>Taux d'alcool: ".$donnee['taux']."%<br/>";
-		}
-		$req->closeCursor(); 
-	?>
--->
+
+	
